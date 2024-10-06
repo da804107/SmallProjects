@@ -1,3 +1,4 @@
+#python3 install nba_api
 from nba_api.stats.static import teams
 from nba_api.stats.endpoints import commonteamroster
 from nba_api.stats.endpoints import teamplayerdashboard
