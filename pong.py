@@ -1,3 +1,4 @@
+#pong game created using pygame
 import pygame
 
 pygame.init()
