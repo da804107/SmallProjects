@@ -1,3 +1,4 @@
+#finds the cycle length sums of a sum
 #isPrime takes in 2 values and calculates if value a is relatively prime to b and returns if true or false
 def relativelyPrime(a, b):
   if (a == 0):
