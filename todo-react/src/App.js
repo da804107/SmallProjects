@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import ListGroup from "react-bootstrap/ListGroup";
+import './App.css';
 
 class App extends Component {
     constructor(props) {
@@ -78,22 +79,14 @@ class App extends Component {
     render() {
         return (
             <Container>
-                <Row
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        fontSize: "3rem",
-                        fontWeight: "bolder",
-                    }}
-                >
+                <Row className="header-row">
                     TODO LIST
                 </Row>
 
                 <hr />
                 <Row>
                     <Col md={{ span: 5, offset: 4 }}>
-                        <InputGroup className="mb-3">
+                        <InputGroup className="input-group">
                             <FormControl
                                 placeholder="add item . . . "
                                 size="lg"
@@ -106,8 +99,7 @@ class App extends Component {
                             />
                             <InputGroup>
                                 <Button
-                                    variant="dark"
-                                    className="mt-2"
+                                    className="add-button"
                                     onClick={() => this.addItem()}
                                 >
                                     ADD
@@ -124,22 +116,18 @@ class App extends Component {
                                 return (
                                   <div key = {index} > 
                                     <ListGroup.Item
-                                        variant="dark"
                                         action
-                                        style={{display:"flex",
-                                                justifyContent:'space-between'
-                                      }}
+                                        className="list-item"
                                     >
                                         {item.value}
                                         <span>
-                                        <Button style={{marginRight:"10px"}}
-                                        variant = "light"
+                                        <Button className="done-button"
                                         onClick={() => this.deleteItem(item.id)}>
-                                          Delete
+                                          DONE
                                         </Button>
-                                        <Button variant = "light"
+                                        <Button className="edit-button"
                                         onClick={() => this.editItem(index)}>
-                                          Edit
+                                          EDIT
                                         </Button>
                                         </span>
                                     </ListGroup.Item>
